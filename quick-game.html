@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.5초 결정 게임</title>
+    <link rel="stylesheet" href="quick-game.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>⚡ 1.5초 결정 게임</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">점수</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">라운드</span>
+                    <span class="stat-value" id="round">1</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">생명</span>
+                    <span class="stat-value" id="lives">❤️❤️❤️</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area" id="gameArea">
+            <div class="start-screen active" id="startScreen">
+                <h2>🎯 빠른 반응속도 테스트!</h2>
+                <p>1.5초 안에 올바른 답을 선택하세요!</p>
+                
+                <div class="best-records" id="bestRecords">
+                    <h3>🏆 최고 기록</h3>
+                    <div class="records-grid">
+                        <div class="record-item">
+                            <span class="record-label">🔢 수학</span>
+                            <span class="record-value" id="bestMath">-</span>
+                        </div>
+                        <div class="record-item">
+                            <span class="record-label">🎨 색깔</span>
+                            <span class="record-value" id="bestColor">-</span>
+                        </div>
+                        <div class="record-item">
+                            <span class="record-label">📝 단어</span>
+                            <span class="record-value" id="bestWord">-</span>
+                        </div>
+                        <div class="record-item">
+                            <span class="record-label">🎲 랜덤</span>
+                            <span class="record-value" id="bestMixed">-</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-modes">
+                    <button class="mode-btn" data-mode="math">🔢 수학 문제</button>
+                    <button class="mode-btn" data-mode="color">🎨 색깔 맞추기</button>
+                    <button class="mode-btn" data-mode="word">📝 단어 게임</button>
+                    <button class="mode-btn selected" data-mode="mixed">🎲 랜덤 모드</button>
+                </div>
+                <button id="startBtn" class="start-btn">게임 시작</button>
+            </div>
+
+            <div class="question-screen" id="questionScreen">
+                <div class="timer-bar">
+                    <div class="timer-fill" id="timerFill"></div>
+                </div>
+                <div class="question-content">
+                    <h2 id="questionText">문제가 여기에 표시됩니다</h2>
+                    <div class="options" id="options">
+                        <!-- 선택지가 여기에 표시됩니다 -->
+                    </div>
+                </div>
+                <div class="timer-display">
+                    <span id="timeLeft">1.5</span>초
+                </div>
+            </div>
+
+            <div class="result-screen" id="resultScreen">
+                <div class="result-content">
+                    <h2 id="resultTitle">결과</h2>
+                    <p id="resultMessage">메시지</p>
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <span class="label">반응 시간</span>
+                            <span class="value" id="reactionTime">0.0초</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="label">획득 점수</span>
+                            <span class="value" id="earnedPoints">+0</span>
+                        </div>
+                    </div>
+                    <button id="nextBtn" class="next-btn">다음 라운드</button>
+                </div>
+            </div>
+
+            <div class="game-over-screen" id="gameOverScreen">
+                <h2>🎮 게임 종료!</h2>
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <span class="label">최종 점수</span>
+                        <span class="value" id="finalScore">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="label">도달 라운드</span>
+                        <span class="value" id="finalRound">1</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="label">평균 반응시간</span>
+                        <span class="value" id="avgReactionTime">0.0초</span>
+                    </div>
+                </div>
+                <div class="game-over-buttons">
+                    <button id="restartBtn" class="restart-btn">다시 시작</button>
+                    <button id="shareBtn" class="share-btn">점수 공유</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quick-game.js"></script>
+</body>
+</html>
