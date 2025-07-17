@@ -1,0 +1,36 @@
+{
+  "name": "quick-decision-game",
+  "version": "1.0.0",
+  "description": "⚡ 1.5초 결정 게임 - 빠른 반응속도와 순발력을 테스트하는 웹 기반 퀴즈 게임",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js 3000",
+    "serve": "node server.js",
+    "test": "echo \"게임을 테스트하려면 npm start를 실행하세요\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "quiz",
+    "reaction-time",
+    "web-game",
+    "javascript",
+    "html5",
+    "css3",
+    "quick-decision",
+    "brain-training"
+  ],
+  "author": "Game Developer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happy4416/game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/happy4416/game/issues"
+  },
+  "homepage": "https://github.com/happy4416/game#readme"
+}
